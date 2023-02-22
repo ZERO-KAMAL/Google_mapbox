@@ -1,0 +1,71 @@
+.map-icons {
+  display: flex;
+  align-items: center;
+  background: var(--green);
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  margin-left: 1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  .icon-box {
+    position: relative;
+    width: 45px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    .hover-txt-box {
+      display: none;
+      color: var(--white);
+      min-width: 95px;
+      position: absolute;
+      background: var(--dark-green);
+      top: 50px;
+      padding: 2px;
+      text-align: center;
+      font-size: 12px;
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--dark-green);
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: -5px;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+        transform: rotate(45deg);
+        z-index: -1;
+      }
+    }
+    &:hover {
+      background: var(--dark-green);
+      .hover-txt-box {
+        display: block;
+      }
+    }
+  }
+  .target-box {
+    &:hover {
+      border-radius: 6px 0px 0px 6px !important;
+    }
+  }
+  .clear-box {
+    &:hover {
+      border-radius: 0px 6px 6px 0px;
+    }
+  }
+  .focus-box {
+    border-left: 1px solid var(--light-green);
+  }
+}

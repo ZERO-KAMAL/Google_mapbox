@@ -1,0 +1,26 @@
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+
+  .mapboxgl-ctrl-group {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+  }
+  .marker {
+    background-image: url("../../icon/marker.svg");
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    background-repeat: no-repeat;
+  }
+}
+
+

@@ -1,0 +1,86 @@
+.bottom-box {
+  // background-color: blueviolet;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+
+  .open-box {
+    background: var(--white);
+    border-radius: 6px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    .openBox-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  .big-box {
+    width: 220px !important;
+    height: 120px !important;
+    bottom: 10px;
+    top: 0px;
+    transition: all 0.3s ease-in-out;
+    @media screen and (max-width: 640px) {
+      width: 70px !important;
+      height: 50px !important;
+      min-width: 70px !important;
+    }
+  }
+
+  .layer-box-parent {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+    overflow: auto;
+    width: 85vw;
+    .layer-box {
+      display: flex;
+      list-style: none;
+      .layer-box-dummy,
+      .layer-box-list {
+        width: 110px;
+        height: 60px;
+        border: 2px solid var(--white);
+        box-shadow: 0 0px 5px #8f8a8a;
+        margin-left: 3px;
+        margin-right: 3px;
+        transition: all 0.3s ease-in-out;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        @media screen and (max-width: 640px) {
+          width: 60px !important;
+          height: 40px !important;
+        }
+      }
+      .hover-txt-box {
+        color: var(--white);
+        min-width: 95px;
+        position: absolute;
+        background: #39719a;
+        top: 48px;
+        padding: 2px;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+    @media screen and (max-width: 1050px) {
+      width: 75vw !important;
+    }
+    @media screen and (max-width: 640px) {
+      width: 62vw !important;
+    }
+  }
+}
